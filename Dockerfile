@@ -6,7 +6,7 @@ ADD ./pgp.key /pgp.key
 
 RUN cat /pgp.key | apt-key add -
 
-RM /pgp.key
+RUN rm /pgp.key
 
 RUN echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' > /etc/apt/sources.list.d/bitcoinxt.list
 
