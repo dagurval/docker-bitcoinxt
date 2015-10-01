@@ -17,7 +17,6 @@ RUN apt-get update && \
 VOLUME ["/bitcoin"]
 
 ENV HOME /bitcoin
-RUN useradd -s /bin/bash -m -d /bitcoin bitcoin
 RUN chown bitcoin:bitcoin -R /bitcoin
 
 ADD ./bin /usr/local/bin
