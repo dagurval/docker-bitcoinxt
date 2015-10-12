@@ -1,4 +1,3 @@
-
 FROM ubuntu:14.04
 MAINTAINER Ruben Callewaert <rubencallewaertdev@gmail.com>
 
