@@ -1,11 +1,13 @@
 FROM ubuntu:14.04
 MAINTAINER Ruben Callewaert <rubencallewaertdev@gmail.com>
 
-VOLUME ["/bitcoin"]
+RUN mkdir /bitcoin
 
 ENV HOME /bitcoin
 RUN useradd -s /bin/bash -m -d /bitcoin bitcoin
 RUN chown bitcoin:bitcoin -R /bitcoin
+
+VOLUME ["/bitcoin"]
 
 ADD ./pgp.key /pgp.key
 
