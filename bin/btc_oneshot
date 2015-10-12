@@ -11,4 +11,4 @@ else
     args=("-rpcallowip=::/0")
 fi
 
-exec bitcoinxtd "${args[@]}"
+exec bitcoinxtd "${args[@]}" > /dev/null
