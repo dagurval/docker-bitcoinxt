@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -ex
+
+chown bitcoin:bitcoin -R /bitcoin
+
+exec sudo -u bitcoin "$@"
