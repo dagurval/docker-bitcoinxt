@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER Ruben Callewaert <rubencallewaertdev@gmail.com>
 
+RUN useradd -s /bin/bash -m -d /bitcoin bitcoin
+
 ADD ./pgp.key /pgp.key
 
 RUN cat /pgp.key | apt-key add -
@@ -17,8 +19,6 @@ ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
 EXPOSE 8332 8333
-
-RUN useradd -s /bin/bash -m -d /bitcoin bitcoin
 
 VOLUME ["/bitcoin"]
 
