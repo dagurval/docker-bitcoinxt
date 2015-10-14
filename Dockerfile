@@ -1,8 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Ruben Callewaert <rubencallewaertdev@gmail.com>
 
-RUN useradd -s /bin/bash -m -d /bitcoin bitcoin
-
 ADD ./pgp.key /pgp.key
 
 RUN cat /pgp.key | apt-key add -
