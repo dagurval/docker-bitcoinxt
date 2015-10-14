@@ -42,7 +42,7 @@ Quick Start
           -p 8333:8333 \
           -p 127.0.0.1:8332:8332 \
           5an1ty/bitcoinxt \
-          btc_oneshot -stealth-mode
+          -rpcallowip=::/0 -stealth-mode
 
 Credits
 -----------
