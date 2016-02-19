@@ -7,7 +7,7 @@ RUN cat /pgp.key | apt-key add -
 
 RUN rm /pgp.key
 
-RUN echo 'deb [ arch=amd64 ] http://bitcoinxt.software.s3-website-us-west-2.amazonaws.com/apt wheezy main' > /etc/apt/sources.list.d/bitcoinxt.list
+RUN echo 'deb [ arch=amd64 ] http://xt.allnodes.xyz jessie main' > /etc/apt/sources.list.d/bitcoinxt.list 
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y bitcoinxt && \
